@@ -1,0 +1,65 @@
+
+[giant-epel]
+name=Extra Packages for Enterprise Linux 6 - $basearch 
+baseurl=http://222.73.196.11/epel/6/$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+
+[puppetlabs-products]
+name=Puppet Labs Products El 6 - $basearch  
+baseurl=http://222.73.196.11/el/6/products/$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+enabled=1
+gpgcheck=0
+
+[puppetlabs-deps]
+name=Puppet Labs Dependencies El 6 - $basearch 
+baseurl=http://222.73.196.11/el/6/dependencies/$basearch
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
+enabled=1
+gpgcheck=0
+
+[ceph]
+name=Ceph packages for $basearch
+baseurl=http://222.73.196.11/rpm-firefly/el6/$basearch
+enabled=1
+gpgcheck=0
+type=rpm-md
+gpgkey=https://222.73.196.11/git/?p=ceph.git;a=blob_plain;f=keys/autobuild.asc
+priority=98
+
+[ceph-noarch]
+name=Ceph noarch packages
+baseurl=http://222.73.196.11/rpm-firefly/el6/noarch
+enabled=1
+gpgcheck=0
+type=rpm-md
+gpgkey=https://222.73.196.11/git/?p=ceph.git;a=blob_plain;f=keys/autobuild.asc
+
+[ceph-source]
+name=Ceph source packages
+baseurl=http://222.73.196.11/rpm-firefly/el6/SRPMS
+enabled=0
+gpgcheck=0
+type=rpm-md
+gpgkey=https://222.73.196.11/git/?p=ceph.git;a=blob_plain;f=keys/autobuild.asc
+
+[ceph-extras]
+name=Ceph Extra Packages and Backports 
+baseurl=http://222.73.196.11/packages/ceph-extras/rpm/centos6/x86_64/
+enabled=1
+gpgcheck=0
+type=rpm-md
+gpgkey=https://222.73.196.11/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+
+[openstack-icehouse]
+name=OpenStack icehouse Repository
+baseurl=http://222.73.196.11/repos/openstack/openstack-icehouse/epel-6/
+enabled=1
+skip_if_unavailable=0
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-RDO-havana
+priority=98
+
